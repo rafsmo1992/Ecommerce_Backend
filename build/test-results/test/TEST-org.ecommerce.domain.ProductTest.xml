@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.ecommerce.domain.ProductTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2023-05-03T17:31:33" hostname="DESKTOP-TRDO32M" time="0.392">
+  <properties/>
+  <testcase name="testProductRepositoryPut()" classname="org.ecommerce.domain.ProductTest" time="0.035"/>
+  <testcase name="testProductCascadeWhenRemoveCart()" classname="org.ecommerce.domain.ProductTest" time="0.054"/>
+  <testcase name="testProductRepositoryGetAll()" classname="org.ecommerce.domain.ProductTest" time="0.044"/>
+  <testcase name="testDeleteProductById()" classname="org.ecommerce.domain.ProductTest" time="0.041"/>
+  <testcase name="testProductRepositoryPutGroup()" classname="org.ecommerce.domain.ProductTest" time="0.044"/>
+  <testcase name="testProductRepositoryPost()" classname="org.ecommerce.domain.ProductTest" time="0.066"/>
+  <testcase name="testProductRepositoryGetById()" classname="org.ecommerce.domain.ProductTest" time="0.047"/>
+  <testcase name="testProductCascadeWhenRemoveGroup()" classname="org.ecommerce.domain.ProductTest" time="0.054"/>
+  <system-out><![CDATA[2023-05-03T19:31:33.883+02:00  INFO 11016 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [org.ecommerce.domain.ProductTest]: ProductTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-03T19:31:33.884+02:00  INFO 11016 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration org.ecommerce.EcommerceApplication for test class org.ecommerce.domain.ProductTest
+Hibernate: insert into `groups` (name, id) values (?, ?)
+Hibernate: insert into products (group_id, name, price, id) values (?, ?, ?, ?)
+Hibernate: insert into products (group_id, name, price, id) values (?, ?, ?, ?)
+Hibernate: select p1_0.id,g1_0.id,g1_0.name,p1_0.name,p1_0.price from products p1_0 join `groups` g1_0 on g1_0.id=p1_0.group_id where p1_0.id=?
+Hibernate: select p1_0.group_id,p1_0.id,p1_0.name,p1_0.price from products p1_0 where p1_0.group_id=?
+Hibernate: select p1_0.id,c1_0.product_id,c1_1.id,u1_0.user_id,u1_0.is_active,u1_0.sign_up_date,u1_0.email,u1_0.login,u1_0.password,g1_0.id,g1_0.name,p1_0.name,p1_0.price from products p1_0 left join (join_carts_products c1_0 join carts c1_1 on c1_1.id=c1_0.cart_id) on p1_0.id=c1_0.product_id left join users u1_0 on u1_0.user_id=c1_1.user_id join `groups` g1_0 on g1_0.id=p1_0.group_id where p1_0.id=?
+Hibernate: select p1_0.group_id,p1_0.id,p1_0.name,p1_0.price from products p1_0 where p1_0.group_id=?
+Hibernate: update products set group_id=?, name=?, price=? where id=?
+Hibernate: select p1_0.id,g1_0.id,g1_0.name,p1_0.name,p1_0.price from products p1_0 join `groups` g1_0 on g1_0.id=p1_0.group_id where p1_0.id=?
+Hibernate: select p1_0.group_id,p1_0.id,p1_0.name,p1_0.price from products p1_0 where p1_0.group_id=?
+Hibernate: select g1_0.id,g1_0.name from `groups` g1_0
+Hibernate: select p1_0.group_id,p1_0.id,p1_0.name,p1_0.price from products p1_0 where p1_0.group_id=?
+Hibernate: delete from products where id=?
+Hibernate: delete from products where id=?
+Hibernate: delete from `groups` where id=?
+Hibernate: select p1_0.id,p1_0.group_id,p1_0.name,p1_0.price from products p1_0
+Hibernate: insert into users (is_active, sign_up_date, email, login, password, user_id) values (?, ?, ?, ?, ?, ?)
+Hibernate: insert into `groups` (name, id) values (?, ?)
+Hibernate: insert into products (group_id, name, price, id) values (?, ?, ?, ?)
+Hibernate: insert into carts (user_id, id) values (?, ?)
+Hibernate: select count(*) from products p1_0
+Hibernate: select c1_0.id,u1_0.user_id,u1_0.is_active,u1_0.sign_up_date,u1_0.email,u1_0.login,u1_0.password from carts c1_0 join users u1_0 on u1_0.user_id=c1_0.user_id where c1_0.id=?
+Hibernate: delete from join_carts_products where cart_id=?
+Hibernate: delete from carts where id=?
+Hibernate: select count(*) from products p1_0
+Hibernate: select u1_0.user_id,u1_0.is_active,u1_0.sign_up_date,u1_0.email,u1_0.login,u1_0.password from users u1_0
+Hibernate: select c1_0.user_id,c1_0.id from carts c1_0 where c1_0.user_id=?
+Hibernate: delete from users where user_id=?
+Hibernate: select c1_0.id,c1_0.user_id from carts c1_0
+Hibernate: select p1_0.id,p1_0.group_id,p1_0.name,p1_0.price from products p1_0
+Hibernate: select g1_0.id,g1_0.name,p1_0.group_id,p1_0.id,p1_0.name,p1_0.price from `groups` g1_0 left join products p1_0 on g1_0.id=p1_0.group_id where g1_0.id=?
+Hibernate: delete from products where id=?
+Hibernate: select g1_0.id,g1_0.name from `groups` g1_0
+Hibernate: select p1_0.group_id,p1_0.id,p1_0.name,p1_0.price from products p1_0 where p1_0.group_id=?
+Hibernate: delete from `groups` where id=?
+Hibernate: insert into `groups` (name, id) values (?, ?)
+Hibernate: insert into `groups` (name, id) values (?, ?)
+Hibernate: insert into products (group_id, name, price, id) values (?, ?, ?, ?)
+Hibernate: insert into products (group_id, name, price, id) values (?, ?, ?, ?)
+Hibernate: insert into products (group_id, name, price, id) values (?, ?, ?, ?)
+Hibernate: select p1_0.id,p1_0.group_id,p1_0.name,p1_0.price from products p1_0
+Hibernate: select g1_0.id,g1_0.name,p1_0.group_id,p1_0.id,p1_0.name,p1_0.price from `groups` g1_0 left join products p1_0 on g1_0.id=p1_0.group_id where g1_0.id=?
+Hibernate: select g1_0.id,g1_0.name,p1_0.group_id,p1_0.id,p1_0.name,p1_0.price from `groups` g1_0 left join products p1_0 on g1_0.id=p1_0.group_id where g1_0.id=?
+Hibernate: select g1_0.id,g1_0.name from `groups` g1_0
+Hibernate: select p1_0.group_id,p1_0.id,p1_0.name,p1_0.price from products p1_0 where p1_0.group_id=?
+Hibernate: select p1_0.group_id,p1_0.id,p1_0.name,p1_0.price from products p1_0 where p1_0.group_id=?
+Hibernate: delete from products where id=?
+Hibernate: delete from products where id=?
+Hibernate: delete from `groups` where id=?
+Hibernate: delete from products where id=?
+Hibernate: delete from `groups` where id=?
+Hibernate: select p1_0.id,p1_0.group_id,p1_0.name,p1_0.price from products p1_0
+Hibernate: insert into `groups` (name, id) values (?, ?)
+Hibernate: insert into products (group_id, name, price, id) values (?, ?, ?, ?)
+Hibernate: insert into products (group_id, name, price, id) values (?, ?, ?, ?)
+Hibernate: select count(*) from products p1_0
+Hibernate: select p1_0.id,g1_0.id,g1_0.name,p1_0.name,p1_0.price from products p1_0 join `groups` g1_0 on g1_0.id=p1_0.group_id where p1_0.id=?
+Hibernate: select p1_0.group_id,p1_0.id,p1_0.name,p1_0.price from products p1_0 where p1_0.group_id=?
+Hibernate: delete from products where id=?
+Hibernate: select count(*) from products p1_0
+Hibernate: select p1_0.id,g1_0.id,g1_0.name,p1_0.name,p1_0.price from products p1_0 join `groups` g1_0 on g1_0.id=p1_0.group_id where p1_0.id=?
+Hibernate: select p1_0.id,p1_0.group_id,p1_0.name,p1_0.price from products p1_0
+Hibernate: select g1_0.id,g1_0.name,p1_0.group_id,p1_0.id,p1_0.name,p1_0.price from `groups` g1_0 left join products p1_0 on g1_0.id=p1_0.group_id where g1_0.id=?
+Hibernate: delete from products where id=?
+Hibernate: select g1_0.id,g1_0.name from `groups` g1_0
+Hibernate: select p1_0.group_id,p1_0.id,p1_0.name,p1_0.price from products p1_0 where p1_0.group_id=?
+Hibernate: delete from `groups` where id=?
+Hibernate: insert into `groups` (name, id) values (?, ?)
+Hibernate: insert into products (group_id, name, price, id) values (?, ?, ?, ?)
+Hibernate: insert into products (group_id, name, price, id) values (?, ?, ?, ?)
+Hibernate: select p1_0.id,g1_0.id,g1_0.name,p1_0.name,p1_0.price from products p1_0 join `groups` g1_0 on g1_0.id=p1_0.group_id where p1_0.id=?
+Hibernate: select p1_0.group_id,p1_0.id,p1_0.name,p1_0.price from products p1_0 where p1_0.group_id=?
+Hibernate: select g1_0.id,g1_0.name,p1_0.group_id,p1_0.id,p1_0.name,p1_0.price from `groups` g1_0 left join products p1_0 on g1_0.id=p1_0.group_id where g1_0.id=?
+Hibernate: select c1_0.product_id,c1_1.id,u1_0.user_id,u1_0.is_active,u1_0.sign_up_date,u1_0.email,u1_0.login,u1_0.password from join_carts_products c1_0 join carts c1_1 on c1_1.id=c1_0.cart_id left join users u1_0 on u1_0.user_id=c1_1.user_id where c1_0.product_id=?
+Hibernate: select c1_0.product_id,c1_1.id,u1_0.user_id,u1_0.is_active,u1_0.sign_up_date,u1_0.email,u1_0.login,u1_0.password from join_carts_products c1_0 join carts c1_1 on c1_1.id=c1_0.cart_id left join users u1_0 on u1_0.user_id=c1_1.user_id where c1_0.product_id=?
+Hibernate: update `groups` set name=? where id=?
+Hibernate: select p1_0.id,g1_0.id,g1_0.name,p1_0.name,p1_0.price from products p1_0 join `groups` g1_0 on g1_0.id=p1_0.group_id where p1_0.id=?
+Hibernate: select p1_0.group_id,p1_0.id,p1_0.name,p1_0.price from products p1_0 where p1_0.group_id=?
+Hibernate: select g1_0.id,g1_0.name from `groups` g1_0
+Hibernate: select p1_0.group_id,p1_0.id,p1_0.name,p1_0.price from products p1_0 where p1_0.group_id=?
+Hibernate: delete from products where id=?
+Hibernate: delete from products where id=?
+Hibernate: delete from `groups` where id=?
+Hibernate: select p1_0.id,p1_0.group_id,p1_0.name,p1_0.price from products p1_0
+Hibernate: insert into `groups` (name, id) values (?, ?)
+Hibernate: insert into `groups` (name, id) values (?, ?)
+Hibernate: insert into products (group_id, name, price, id) values (?, ?, ?, ?)
+Hibernate: insert into products (group_id, name, price, id) values (?, ?, ?, ?)
+Hibernate: insert into products (group_id, name, price, id) values (?, ?, ?, ?)
+Hibernate: insert into products (group_id, name, price, id) values (?, ?, ?, ?)
+Hibernate: select count(*) from products p1_0
+Hibernate: select count(*) from `groups` g1_0
+Hibernate: select g1_0.id,g1_0.name from `groups` g1_0
+Hibernate: select p1_0.group_id,p1_0.id,p1_0.name,p1_0.price from products p1_0 where p1_0.group_id=?
+Hibernate: select p1_0.group_id,p1_0.id,p1_0.name,p1_0.price from products p1_0 where p1_0.group_id=?
+Hibernate: delete from products where id=?
+Hibernate: delete from products where id=?
+Hibernate: delete from `groups` where id=?
+Hibernate: delete from products where id=?
+Hibernate: delete from products where id=?
+Hibernate: delete from `groups` where id=?
+Hibernate: select p1_0.id,p1_0.group_id,p1_0.name,p1_0.price from products p1_0
+Hibernate: insert into `groups` (name, id) values (?, ?)
+Hibernate: insert into `groups` (name, id) values (?, ?)
+Hibernate: insert into products (group_id, name, price, id) values (?, ?, ?, ?)
+Hibernate: insert into products (group_id, name, price, id) values (?, ?, ?, ?)
+Hibernate: select p1_0.id,g1_0.id,g1_0.name,p1_0.name,p1_0.price from products p1_0 join `groups` g1_0 on g1_0.id=p1_0.group_id where p1_0.id=?
+Hibernate: select p1_0.group_id,p1_0.id,p1_0.name,p1_0.price from products p1_0 where p1_0.group_id=?
+Hibernate: select p1_0.id,g1_0.id,g1_0.name,p1_0.name,p1_0.price from products p1_0 join `groups` g1_0 on g1_0.id=p1_0.group_id where p1_0.id=?
+Hibernate: select p1_0.group_id,p1_0.id,p1_0.name,p1_0.price from products p1_0 where p1_0.group_id=?
+Hibernate: select p1_0.id,p1_0.group_id,p1_0.name,p1_0.price from products p1_0
+Hibernate: select g1_0.id,g1_0.name,p1_0.group_id,p1_0.id,p1_0.name,p1_0.price from `groups` g1_0 left join products p1_0 on g1_0.id=p1_0.group_id where g1_0.id=?
+Hibernate: delete from products where id=?
+Hibernate: delete from products where id=?
+Hibernate: select g1_0.id,g1_0.name from `groups` g1_0
+Hibernate: select p1_0.group_id,p1_0.id,p1_0.name,p1_0.price from products p1_0 where p1_0.group_id=?
+Hibernate: select p1_0.group_id,p1_0.id,p1_0.name,p1_0.price from products p1_0 where p1_0.group_id=?
+Hibernate: delete from `groups` where id=?
+Hibernate: delete from `groups` where id=?
+Hibernate: insert into `groups` (name, id) values (?, ?)
+Hibernate: insert into `groups` (name, id) values (?, ?)
+Hibernate: insert into products (group_id, name, price, id) values (?, ?, ?, ?)
+Hibernate: insert into products (group_id, name, price, id) values (?, ?, ?, ?)
+Hibernate: insert into products (group_id, name, price, id) values (?, ?, ?, ?)
+Hibernate: select count(*) from products p1_0
+Hibernate: select count(*) from `groups` g1_0
+Hibernate: select g1_0.id,g1_0.name,p1_0.group_id,p1_0.id,p1_0.name,p1_0.price from `groups` g1_0 left join products p1_0 on g1_0.id=p1_0.group_id where g1_0.id=?
+Hibernate: delete from products where id=?
+Hibernate: delete from products where id=?
+Hibernate: delete from `groups` where id=?
+Hibernate: select g1_0.id,g1_0.name,p1_0.group_id,p1_0.id,p1_0.name,p1_0.price from `groups` g1_0 left join products p1_0 on g1_0.id=p1_0.group_id where g1_0.id=?
+Hibernate: delete from products where id=?
+Hibernate: delete from `groups` where id=?
+Hibernate: select count(*) from `groups` g1_0
+Hibernate: select count(*) from `groups` g1_0
+Hibernate: select g1_0.id,g1_0.name from `groups` g1_0
+Hibernate: select p1_0.id,p1_0.group_id,p1_0.name,p1_0.price from products p1_0
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

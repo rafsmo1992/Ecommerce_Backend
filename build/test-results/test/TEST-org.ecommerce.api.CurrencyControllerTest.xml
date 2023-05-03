@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.ecommerce.api.CurrencyControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-05-03T17:31:31" hostname="DESKTOP-TRDO32M" time="1.333">
+  <properties/>
+  <testcase name="testConvertCurrency()" classname="org.ecommerce.api.CurrencyControllerTest" time="1.333"/>
+  <system-out><![CDATA[19:31:24.741 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Neither @ContextConfiguration nor @ContextHierarchy found for test class [CurrencyControllerTest]: using SpringBootContextLoader
+19:31:24.753 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader -- Could not detect default resource locations for test class [org.ecommerce.api.CurrencyControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+19:31:24.755 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [org.ecommerce.api.CurrencyControllerTest]: CurrencyControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+19:31:24.802 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Using ContextCustomizers for test class [CurrencyControllerTest]: [DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer]
+19:31:24.949 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider -- Identified candidate component class: file [C:\projects\Ecommerce_Backend\build\classes\java\main\org\ecommerce\EcommerceApplication.class]
+19:31:24.951 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration org.ecommerce.EcommerceApplication for test class org.ecommerce.api.CurrencyControllerTest
+19:31:25.132 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Using TestExecutionListeners for test class [CurrencyControllerTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
+19:31:25.134 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener -- Before test class: class [CurrencyControllerTest], class annotated with @DirtiesContext [false] with mode [null]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.6)
+
+2023-05-03T19:31:25.572+02:00  INFO 11016 --- [    Test worker] o.ecommerce.api.CurrencyControllerTest   : Starting CurrencyControllerTest using Java 17.0.6 with PID 11016 (started by Grishnakh in C:\projects\Ecommerce_Backend)
+2023-05-03T19:31:25.575+02:00  INFO 11016 --- [    Test worker] o.ecommerce.api.CurrencyControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2023-05-03T19:31:26.650+02:00  INFO 11016 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-03T19:31:26.748+02:00  INFO 11016 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85 ms. Found 7 JPA repository interfaces.
+2023-05-03T19:31:27.349+02:00  INFO 11016 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-03T19:31:27.427+02:00  INFO 11016 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-03T19:31:27.885+02:00  INFO 11016 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-03T19:31:28.184+02:00  INFO 11016 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7cbf4f8c
+2023-05-03T19:31:28.187+02:00  INFO 11016 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-03T19:31:28.227+02:00  INFO 11016 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2023-05-03T19:31:28.230+02:00  WARN 11016 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-05-03T19:31:29.724+02:00  INFO 11016 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-03T19:31:29.736+02:00  INFO 11016 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-03T19:31:30.553+02:00  WARN 11016 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-03T19:31:31.162+02:00  INFO 11016 --- [    Test worker] o.ecommerce.api.CurrencyControllerTest   : Started CurrencyControllerTest in 5.965 seconds (process running for 7.922)
+]]></system-out>
+  <system-err><![CDATA[[2023.05.03 19:31:25] (Coverage): Error during class instrumentation: org.springframework.boot.logging.log4j2.Log4J2LoggingSystem: java.lang.RuntimeException: java.io.IOException: Class org/apache/logging/log4j/core/config/composite/CompositeConfiguration not found
+]]></system-err>
+</testsuite>
